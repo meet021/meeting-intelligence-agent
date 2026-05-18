@@ -13,18 +13,7 @@ from history import save_meeting_to_history, load_history, get_history_stats
 from wordcloud_generator import generate_wordcloud, get_top_words
 from pdf_generator import build_pdf_report
 
-
-try:
     
-        get_google_auth_url, exchange_code_for_token, is_google_connected,
-        disconnect_google, get_upcoming_meetings, get_past_meetings,
-        get_meet_recordings, download_recording, get_google_credentials_status,
-        get_connected_email
-    )
-    GOOGLE_AVAILABLE = True
-except Exception as e:
-    print(f"Google integration unavailable: {e}")
-    GOOGLE_AVAILABLE = False
 
 st.set_page_config(page_title="Meeting Intelligence Agent", page_icon="🤖", layout="wide")
 
