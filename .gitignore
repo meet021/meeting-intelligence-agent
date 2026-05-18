@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+.env
+meeting_history.json
+meeting_memory.json
+google_token.pickle

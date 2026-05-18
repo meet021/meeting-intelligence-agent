@@ -1,0 +1,12 @@
+anthropic
+langchain
+langchain-anthropic
+langgraph
+tavily-python
+openai-whisper
+streamlit
+python-dotenv
+setuptools
+plotly
+notion-client
+langdetect
