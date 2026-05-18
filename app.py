@@ -267,15 +267,15 @@ elif page == "🤖 Analyze Meeting":
         uploaded_file = st.file_uploader("Upload audio or video file", type=["mp3", "mp4", "wav", "m4a", "ogg", "webm"])
 
         st.subheader("🎙️ Or Record Live")
-        if is_microphone_available():
-            mics = get_available_microphones()
+        if False:
+            mics = []
             if mics:
                 st.caption(f"🎤 {len(mics)} microphone(s) detected")
             rec_col1, rec_col2 = st.columns(2)
             with rec_col1:
                 if not st.session_state.is_recording:
                     if st.button("🔴 Start Recording", use_container_width=True):
-                        recorder = LiveRecorder()
+                        recorder = None()
                         recorder.start()
                         st.session_state.recorder = recorder
                         st.session_state.is_recording = True
