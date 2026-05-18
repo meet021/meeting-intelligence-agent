@@ -9,4 +9,5 @@ python-dotenv
 setuptools
 plotly
 notion-client
-langdetect
+langdetectwordcloud
+matplotlib
