@@ -18,7 +18,7 @@ from pdf_generator import build_pdf_report
 st.set_page_config(page_title="Meeting Intelligence Agent", page_icon="🤖", layout="wide")
 
 query_params = st.query_params
-if "code" in query_params and GOOGLE_AVAILABLE:
+if "code" in query_params and False:
     code = query_params["code"]
     if exchange_code_for_token(code):
         st.session_state.google_just_connected = True
@@ -101,7 +101,7 @@ page = st.sidebar.selectbox("Navigate", [
 
 st.sidebar.divider()
 st.sidebar.markdown("### 🔗 Integrations")
-google_connected = GOOGLE_AVAILABLE and is_google_connected()
+google_connected = False
 if google_connected:
     try:
         email = get_connected_email()
@@ -136,7 +136,7 @@ if page == "📅 Google Integration":
         st.success("✅ Google account connected successfully!")
         st.session_state.google_just_connected = False
 
-    if not GOOGLE_AVAILABLE:
+    if not False:
         st.warning("⚠️ Google integration unavailable. Check google_credentials.json.")
     else:
         try:
